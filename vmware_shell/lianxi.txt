@@ -1,0 +1,7 @@
+1、新磁盘 扩容	resize	**
+2、秘钥登陆
+3、修改ssh端口
+4、防火墙	iptable  **
+5、静态nginx，访问。 使用vsftp 共享目录		**
+6、rsync		**
+7、svn jenkins
