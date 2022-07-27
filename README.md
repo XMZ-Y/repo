@@ -1,2 +1,1 @@
-# repo
-https://github.com/XMZ-Y/repo.git
+# https://github.com/XMZ-Y/repo.git
