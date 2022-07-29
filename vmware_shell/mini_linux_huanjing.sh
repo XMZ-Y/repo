@@ -1,8 +1,7 @@
 #!/bin/bash
-ip=$1
-hostname=$2
+hostname=$1
 #设置静态ip
-nmcli connection modify ens33 ipv4.addresses $ip\/24 ipv4.gateway 192.168.21.1 ipv4.dns 223.5.5.5 ipv4.method manual autoconnect yes
+nmcli connection modify ens33 ipv4.addresses 192.168.86.11\/24 ipv4.gateway 192.168.86.1 ipv4.dns 223.5.5.5 ipv4.method manual autoconnect yes
 nmcli connection up ens33
 #设置主机名
 hostnamectl set-hostname $hostname
