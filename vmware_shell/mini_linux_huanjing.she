@@ -1,6 +1,6 @@
 #!/bin/bash
-ip=$1
-hostname=$2
+ip=192.168.21.11
+hostname=node1
 #设置静态ip
 nmcli connection modify ens33 ipv4.addresses $ip\/24 ipv4.gateway 192.168.21.1 ipv4.dns 223.5.5.5 ipv4.method manual autoconnect yes
 nmcli connection up ens33
@@ -8,10 +8,8 @@ nmcli connection up ens33
 hostnamectl set-hostname $hostname
 #设置selinux
 setenforce 0
-cp -f /etc/sysconfig/selinux /etc/sysconfig/selinux.back
-linenum=`grep -n "^SELINUX=" /etc/sysconfig/selinux|awk -F: '{print $1}'`
-linetxt="SELINUX=disabled"
-sed -i "${linenum}c${linetxt}" /etc/sysconfig/selinux
+linenum=`grep -n "^SELINUX=" /etc/sysconfig/selinux|awk -F ":" '{print $1}'`
+sed -i $linenumcSELINUX=disabled /etc/sysconfig/selinux
 #关闭firewall
 systemctl stop firewalld
 systemctl disable firewalld
