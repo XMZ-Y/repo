@@ -12,4 +12,4 @@ umount /data
 e2fsck -f /dev/sdb
 resize2fs /dev/sdb
 mount -a
-exit 0
+echo "resize ok"

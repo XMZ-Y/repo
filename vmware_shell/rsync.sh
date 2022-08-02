@@ -6,4 +6,4 @@ for i in 12 20
 do
 	rsync -au --delete -e "ssh -p 1002 -o StrictHostKeyChecking=no" /root/shell 192.168.21.$i:/root/
 done
-exit 0
+echo "rsync ok"
