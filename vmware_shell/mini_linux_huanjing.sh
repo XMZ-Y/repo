@@ -1,7 +1,9 @@
 #!/bin/bash
-hostname=$1
+read -p $'主机名：\n' hostname
+read -p $'ip地址：\n' ipadd
+read -p $'ip网关：\n' ipgw
 #设置静态ip
-nmcli connection modify ens33 ipv4.addresses 192.168.86.11\/24 ipv4.gateway 192.168.86.1 ipv4.dns 223.5.5.5 ipv4.method manual autoconnect yes
+nmcli connection modify ens33 ipv4.addresses $ipadd\/24 ipv4.gateway $ipgw ipv4.dns 223.5.5.5 ipv4.method manual autoconnect yes
 nmcli connection up ens33
 #设置主机名
 hostnamectl set-hostname $hostname
@@ -17,6 +19,6 @@ systemctl disable firewalld
 #安装常用功能 
 yum repolist
 yum -y install bash-completion	#tab自动补全
-yum -y install net-tools		#netstat命令
+yum -y install net-tools	#netstat命令
 yum -y install vim
-exit 0
+echo "设置基础环境完成"
