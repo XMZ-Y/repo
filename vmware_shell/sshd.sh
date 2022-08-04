@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 port=22
 #写入公钥到.ssh目录
 mkdir /root/.ssh

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 #下载解压 containerd
 yum -y install wget
 cd ~

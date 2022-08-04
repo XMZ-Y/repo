@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 #设置selinux
 setenforce 0
 cp -f /etc/sysconfig/selinux /etc/sysconfig/selinux.back
