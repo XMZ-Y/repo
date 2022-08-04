@@ -3,7 +3,7 @@ set -e
 #下载解压 containerd
 yum -y install wget
 cd ~
-wget https://hub.fastgit.org/containerd/containerd/releases/download/v1.6.6/containerd-1.6.6-linux-amd64.tar.gz
+wget https://hub.fastgit.org/containerd/containerd/releases/download/v1.6.6/containerd-1.6.6-linux-amd64.tar.gz --no-check-certificate
 tar -xvf containerd-1.6.6-linux-amd64.tar.gz -C /usr/local/
 #生成 containerd 配置文件
 cd /usr/local/bin/
@@ -41,7 +41,7 @@ systemctl status containerd.service
 #下载解压 crictl 命令
 cd ~
 VERSION="v1.24.2"
-wget https://hub.fastgit.org/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz
+wget https://hub.fastgit.org/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz --no-check-certificate
 tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
 # rm -f crictl-$VERSION-linux-amd64.tar.gz
 crictl config runtime-endpoint unix:///run/containerd/containerd.sock
