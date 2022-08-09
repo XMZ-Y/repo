@@ -118,3 +118,8 @@ crictl completion bash >/etc/bash_completion.d/crictl
 source <(kubectl completion bash)
 kubectl completion bash >/etc/bash_completion.d/kubectl
 source /usr/share/bash-completion/bash_completion
+#下载各个机器需要的镜像
+images=`kubeadm config images list|awk -F / '{print $NF}'`
+for imageName in ${images[@]} ; do
+	crictl pull registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName
+done
