@@ -102,8 +102,9 @@ gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors
 EOF
 
 # 安装kubeadm,kubelet和kubectl
+yum remove -y kubelet kubeadm kubectl
 yum list kubeadm --showduplicates
-yum install -y kubelet-1.24.3 kubeadm-1.24.3 kubectl-1.24.3 --disableexcludes=kubernetes
+yum install -y kubelet-1.23.6 kubeadm-1.23.6 kubectl-1.23.6 --disableexcludes=kubernetes
 
 # 设置开机自启
 systemctl daemon-reload

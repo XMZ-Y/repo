@@ -8,16 +8,15 @@ images=`cat calico.yaml |grep image|sed -n "s/.*image: //p"`
 for imageName in ${images[@]} ; do
 	crictl pull $imageName
 done
-kubectl apply -f calico.yaml
+kubectl apply -f calico.yaml&&sleep 1m
 #部署Dashboard常用扩展工具
 rm -f dashboard-recommended.yaml
-wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.6.0/aio/deploy/recommended.yaml
+wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.5.1/aio/deploy/recommended.yaml
 mv recommended.yaml dashboard-recommended.yaml
 sed -i '42a\      nodePort: 30005' dashboard-recommended.yaml
 sed -i '39a\  type: NodePort' dashboard-recommended.yaml
-kubectl apply -f dashboard-recommended.yaml
-
-tee ./dash.yaml <<'EOF'
+kubectl apply -f dashboard-recommended.yaml&&sleep 1m
+tee ./auth.yaml <<'EOF'
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -37,5 +36,5 @@ subjects:
   name: admin-user
   namespace: kubernetes-dashboard
 EOF
-kubectl apply -f dash.yaml
+kubectl apply -f auth.yaml&&sleep 1m
 kubectl -n kubernetes-dashboard get secret $(kubectl -n kubernetes-dashboard get sa/admin-user -o jsonpath="{.secrets[0].name}") -o go-template="{{.data.token | base64decode}}"

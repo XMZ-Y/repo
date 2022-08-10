@@ -34,7 +34,7 @@ etcd:
     dataDir: /var/lib/etcd
 imageRepository: registry.aliyuncs.com/google_containers
 kind: ClusterConfiguration
-kubernetesVersion: v1.24.3
+kubernetesVersion: v1.23.6
 networking:
   dnsDomain: cluster.local
   podSubnet: 10.244.0.0/16
@@ -62,3 +62,8 @@ echo "请按照屏幕输出提示将node节点join到master节点。"
 mkdir -p $HOME/.kube && \
 cp /etc/kubernetes/admin.conf $HOME/.kube/config && \
 chown $(id -u):$(id -g) $HOME/.kube/config
+#重置集群
+# kubeadm reset -f
+# rm -rf /etc/kubernetes
+# rm -rf /var/lib/etcd/
+# rm -rf $HOME/.kube
