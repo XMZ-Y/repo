@@ -1,0 +1,7 @@
+VMware16激活码
+ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+YF390-0HF8P-M81RQ-2DXQE-M2UT6
+ZF71R-DMX85-08DQY-8YMNC-PPHV8
+
+OpenArk 是一个开源的 Windows 反 rookit (ARK) 工具。 Ark 是 Anti-Rootkit 的缩写，它的目标是逆向/编程助手，用户也可以发现操作系统中隐藏的恶意软件。
+下载地址：https://github.com/BlackINT3/OpenArk/releases/
