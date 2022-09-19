@@ -15,11 +15,12 @@ kubectl apply -f calico.yaml&&sleep 1m
 #安装kuboard
 wget https://addons.kuboard.cn/kuboard/kuboard-v3.yaml
 kubectl apply -f kuboard-v3.yaml
-# 您也可以使用下面的指令，唯一的区别是，该指令使用华为云的镜像仓库替代 docker hub 分发 Kuboard 所需要的镜像
-# kubectl apply -f https://addons.kuboard.cn/kuboard/kuboard-v3-swr.yaml
-#	 访问端口：30080
-#    用户名： admin
-#    密码： Kuboard123
+# # 您也可以使用下面的指令，唯一的区别是，该指令使用华为云的镜像仓库替代 docker hub 分发 Kuboard 所需要的镜像
+# # kubectl apply -f https://addons.kuboard.cn/kuboard/kuboard-v3-swr.yaml
+# #	 访问端口：30080
+# #    用户名： admin
+# #    密码： Kuboard123
+#
 #------------------------------------------------------------------------------------------------------
 # #安装Dashboard
 # rm -f dashboard-recommended.yaml
