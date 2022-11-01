@@ -12,4 +12,8 @@ https://github.com/BlackINT3/OpenArk/releases/
 mobaxterm远程工具
 https://mobaxterm.mobatek.net/download-home-edition.html
 
-
+win整体检测
+winsat formal
+winsat formal -restart
+win磁盘检测
+winsat disk -drive d -xml C:\Windows\Performance\WinSAT\DataStore\disk_d.xml
