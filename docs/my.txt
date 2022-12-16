@@ -11,6 +11,8 @@ https://github.com/BlackINT3/OpenArk/releases/
 
 mobaxterm远程工具
 https://mobaxterm.mobatek.net/download-home-edition.html
+汉化版
+https://github.com/RipplePiam/MobaXterm-Chinese-Simplified/blob/main/MobaXterm_Portable_v22.1/MobaXterm_Personal_22.1.exe
 
 win整体检测
 winsat formal
