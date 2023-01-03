@@ -1,0 +1,55 @@
+##【容器必须有前台执行的任务，否则自动停止】
+
+docker images
+#查看镜像
+#-q只显示id
+
+docker pull
+#拉取镜像
+
+docker run -it --rm 镜像id bash
+#运行容器,打开bash交互,--rm容器停止后删除.
+#-d后台运行,-p端口映射,-v数据卷映射,--name定义容器名称
+#run，如果本地不存在，则先pull下载镜像
+
+docker port 容器id
+#查看容器端口映射
+
+docker ps -a
+#查看所有容器
+#-q只显示id
+
+docker rm `docker ps -aq`
+#删除所有容器
+
+docker rmi
+#删除镜像
+
+docker container inspect 运行的容器id
+#查看运行中容器的详细信息,json格式数据
+
+docker exec -it 容器id bash
+#bash窗口进入运行中的容器
+
+docker image save 镜像名 > 文件名
+docker image load -i 文件名
+#本地导出、导入镜像
+
+docker info
+#查看docker服务的信息
+
+docker image inspect 镜像id
+#查看镜像详细信息
+
+docker logs -f 容器id
+docker logs 容器id | tail -10
+#查看容器日志
+
+docker commit 容器id 新镜像名
+#提交容器到本地
+
+docker build .
+#运行当前目录下的dockerfile
+
+docker tag 镜像id 新镜像名
+#修改镜像名
