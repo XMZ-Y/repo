@@ -25,7 +25,7 @@ docker rm `docker ps -aq`
 docker rmi
 #删除镜像
 
-docker container inspect 运行的容器id
+docker container inspect 容器id
 #查看运行中容器的详细信息,json格式数据
 
 docker exec -it 容器id bash
@@ -53,3 +53,12 @@ docker build .
 
 docker tag 镜像id 新镜像名
 #修改镜像名
+
+docker top 容器id
+#查看容器的进程信息
+
+docker stats 容器id
+#查看容器的资源信息
+
+docker inspect --format {{."NetworkSettings".IPAddress}} 容器id
+#查看json字典指定key的value
