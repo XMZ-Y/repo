@@ -1,3 +1,6 @@
+访问返回本机外网ip
+https://ipinfo.io/ip
+
 win激活工具
 http://www.yishimei.cn/network/319.html
 
