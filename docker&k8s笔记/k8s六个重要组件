@@ -1,0 +1,6 @@
+1、ETCD：k8s内部运行，存储所有节点信息、节点上部署的容器信息等。（key-value形式的数据库）
+2、api-server:对请求和响应的控制，所有组件都要经过它校验。
+3、controller-manager：负责部署容器到节点，自动扩展、故障检测、滚动更新等。deployment就是其中一种。
+4、scheduler:资源调度器，决定哪些容器部署到哪个节点
+5、kubelet:拉取镜像、运行容器、pod管理、容器健康检查、容器监控，也负责volume（CVI）和网络（CNI）的管理
+6、kubectl:master节点上的客户端命令，和api-server交互
