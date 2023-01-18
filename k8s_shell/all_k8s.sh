@@ -1,6 +1,12 @@
 #!/bin/bash
+#设置本地解析
+cat <<EOF >> /etc/hosts
+192.168.21.30 k8s-master
+192.168.21.31 k8s-node1
+192.168.21.32 k8s-node2
+EOF
 
-# 更新
+# 更新yum
 yum update -y
 
 # 卸载 firewalld
@@ -83,9 +89,9 @@ disable-pull-on-run: false
 EOF
 
 # 使用 systemd cgroup驱动程序
-sed -i "s#k8s.gcr.io#registry.aliyuncs.com/google_containers#g"  /etc/containerd/config.toml
-sed -i "s/SystemdCgroup = false/SystemdCgroup = true/g" /etc/containerd/config.toml
-sed -i "s#https://registry-1.docker.io#https://registry.aliyuncs.com#g"  /etc/containerd/config.toml
+sed -ri 's#(sandbox_image = ).*#\1"registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.2"#' /etc/containerd/config.toml
+sed -ri "s/(SystemdCgroup = ).*/\1true/g" /etc/containerd/config.toml
+sed -i '/registry.mirrors/a\        [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]\n          endpoint = ["https://docker.mirrors.ustc.edu.cn"]\n        [plugins."io.containerd.grpc.v1.cri".registry.mirrors."k8s.gcr.io"]\n          endpoint = ["https://registry.cn-hangzhou.aliyuncs.com/google_containers"]' /etc/containerd/config.toml
 systemctl daemon-reload
 systemctl enable containerd
 systemctl restart containerd
@@ -102,7 +108,6 @@ gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors
 EOF
 
 # 安装kubeadm,kubelet和kubectl
-yum remove -y kubelet kubeadm kubectl
 yum list kubeadm --showduplicates
 yum install -y kubelet-1.23.6 kubeadm-1.23.6 kubectl-1.23.6 --disableexcludes=kubernetes
 
