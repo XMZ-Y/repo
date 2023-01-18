@@ -2,7 +2,7 @@
 #kubeadm token create --print-join-command
 
 #使用token，加入集群
-#kubeadm join k8s-master:6443 --token agz7qs.3d2ihpu9w12aty5t
+#kubeadm join k8s-master:6443 --token xxxxxx --discovery-token-unsafe-skip-ca-verification
 
 #node节点使用kubectl命令
 scp -r $HOME/.kube k8s-node1:$HOME
