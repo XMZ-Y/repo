@@ -1,16 +1,15 @@
-#master执行，生成新的token
-#kubeadm token create --print-join-command
+#生成新的token（master执行）
+kubeadm token create --print-join-command
 
-#使用token，加入集群
-#kubeadm join k8s-master:6443 --token xxxxxx --discovery-token-unsafe-skip-ca-verification
-
-#node节点使用kubectl命令
+#node节点使用kubectl命令（master执行）
 scp -r $HOME/.kube k8s-node1:$HOME
 
+#使用token，加入集群（node执行）
+kubeadm join k8s-master:6443 --token xxxxxx --discovery-token-unsafe-skip-ca-verification
+
+
 #安装nginx，测试集群
-kubectl create deployment nginx --image=nginx
-kubectl expose deployment nginx --port=80 --type=NodePort
-kubectl get pods,svc
+
 
 
 #containerd配置文件修改参考
