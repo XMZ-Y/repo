@@ -7,6 +7,7 @@ import json
 import re
 from urllib.parse import unquote_plus
 import requests
+import datetime
 
 def fetch_live_room_info(url):
     res=requests.get(
@@ -51,13 +52,17 @@ def on_message(ws,content):
         s.logid = frame.logid
         ws.send(s.SerializeToString())
 
+    f = open(r"D:\dy_DM.txt", "a", encoding="UTF-8")
     for item in response.messagesList:
         if item.method != "WebcastChatMessage":
             continue
         message = ChatMessage()
         message.ParseFromString(item.payload)
-        info = f"性别：{message.user.gender} 昵称：{message.user.nickName}    {message.content}"
-        print(info)
+        time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        info = f"{message.user.gender} {message.user.nickName}      {message.content}"
+        print(time,info)
+        f.write(f"{time} {info}\n")
+    f.close()
 
 def on_error(ws,content):
     print("on_error")
@@ -88,6 +93,6 @@ def run(web_url):
 
 
 if __name__ == '__main__':
-    web_url="https://live.douyin.com/271069055515"        #原神呼呼
+    web_url="https://live.douyin.com/271069055515"        #原神呼呼直播间
     # web_url="https://live.douyin.com/80017709309"         #东方甄选直播间
     run(web_url)
