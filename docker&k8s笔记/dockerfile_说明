@@ -1,0 +1,38 @@
+FROM
+#指定基础镜像
+
+RUN
+#执行linux命令，通常安装依赖软件
+
+ADD
+#添加文件到容器内部，自动解压gzip/bzip2/xz/tar格式
+#可写url，自动访问链接下载文件，权限600（若链接内为压缩包，需再使用run解压）
+
+COPY
+#拷贝文件到容器内部，无解压操作
+
+WORKDIR
+#指定进入容器后，工作目录
+
+USER
+#指定用户
+
+VOLUME ["/data1","/data2"]
+#宿主机和容器内的数据卷映射,支持列表写入参数（每个参数 自动生成宿主机文件夹做映射，可以通过docker inspect 容器id 查看）
+
+EXPOSE
+#设置-P选项,暴露的端口
+#注：EXPOSE并不会让容器的端口访问到主机。要使其可访问，需要在docker run运行容器时通过-p来发布这些端口，或通过-P参数来发布EXPOES设置的端口
+
+CMD ["",""]
+#运行容器时执行的参数，会被命令行指令覆盖
+
+ENTRYPOINT ["",""]
+#CMD将作为ENTRYPOINT的参数执行，命令行指令依然会覆盖cmd
+#容器启动后执行的命令
+
+ENV NAME="xx"
+#环境变量设置，dockerfile和容器内都可以调用
+
+ARG
+#环境变量，只用于dockerfile内

@@ -1,0 +1,10 @@
+一）查看所有端口映射
+C:\Windows\system32>netsh interface portproxy show all
+
+二）删除已存在的端口映射
+C:\Windows\system32>netsh interface portproxy delete v4tov4 listenaddress=192.168.7.100 listenport=5678
+
+C:\Windows\system32>netsh interface portproxy show all
+
+三）新增端口映射
+C:\Windows\system32>netsh interface portproxy add v4tov4 listenaddress=192.168.7.100 listenport=5678 connectaddress=192.168.7.100 connectport=8080

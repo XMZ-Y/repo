@@ -1,0 +1,23 @@
+使用vbs脚本后台运行
+
+创建一个.bat文件，
+
+E:
+cd browser\bin
+python main.py
+
+该文件的写法就是终端命令，在这里就不细说。
+创建一个.vbe文件
+
+set ws=WScript.CreateObject("WScript.Shell")
+ws.Run "E:\browser\bin\main.bat /start",0
+
+写法固定，将E:\browser\bin\main.bat换成刚刚创建的.bat文件路径即可。需要是一个绝对路径
+
+将.vbe文件放到StartUp目录下。地址栏输入：
+C:\Users\你的账户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+或：
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+前者是针对某个账户的开机启动，账户默认是Administrator，后者是针对所有账户的启动。将刚刚创建的.vbe文件放入上面任意一个目录中即可。根据自己要求选择。
+
+开机重启电脑，查看任务管理器。如果你的任务管理器中有以下的python任务，则说明配置成功
