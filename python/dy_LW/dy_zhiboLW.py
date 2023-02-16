@@ -1,4 +1,4 @@
-from dy_pb2 import PushFrame,Response,ChatMessage
+from dy_pb2 import PushFrame,Response,ChatMessage,GiftMessage
 from websocket import WebSocketApp
 from urllib.parse import unquote_plus
 import gzip
@@ -51,14 +51,15 @@ def on_message(ws,content):
         s.logid = frame.logid
         ws.send(s.SerializeToString())
 
-    f = open(r"D:\dy_DM.txt", "a", encoding="UTF-8")
+    f = open(r"D:\dy_LW.txt", "a", encoding="UTF-8")
     for item in response.messagesList:
-        if item.method != "WebcastChatMessage":
+        if item.method != "WebcastGiftMessage":
             continue
-        message = ChatMessage()
+        message = GiftMessage()
         message.ParseFromString(item.payload)
+        # print(message)
         time_now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        info = f"{message.user.gender} {message.user.nickName}      {message.content}"
+        info = f"{message.user.nickName}  送来  {message.comboCount}个  {message.gift.name}"
         print(time_now,info)
         f.write(f"{time_now} {info}\n")
     f.close()
@@ -102,6 +103,4 @@ if __name__ == '__main__':
         room_user_count=run()
         time.sleep(3)
         if room_user_count == "0":
-            # break
-            print("未开播，半小时后自动重试")
-            time.sleep(1800)
+            break
