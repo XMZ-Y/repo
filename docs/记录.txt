@@ -2,3 +2,17 @@
 1、ftp的root目录权限设置不可以是777，下级目录可以
 2、设置IE浏览器>>Internet选项>>高级>>将“使用被动FTP（用于防火墙和DSL调制解调器的兼容）”选项去掉>>确定即可
 3、重启后访问
+
+
+
+【protoc使用】
+编写.proto文件
+例如：
+syntax = "proto3";
+package dy;
+message HeadersList{
+    string key = 1;
+    string value  = 2;
+}
+命令：
+protoc --python_out=. **.proto
