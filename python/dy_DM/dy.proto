@@ -62,3 +62,21 @@ message ChatMessage{
     string content = 3;
     bool visibleToSender =4;
 }
+
+message Gift{
+    string name = 16;
+}
+
+message GiftMessage{
+    uint64 giftId = 2;
+    uint64 groupCount = 4;
+    uint64 repeatCount = 5;
+    uint64 comboCount = 6;
+    User user = 7;
+    Gift gift = 15;
+}
+
+message MemberMessage{
+    User user = 2;
+    uint64 memberCount = 3;
+}
