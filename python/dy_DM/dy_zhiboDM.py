@@ -67,12 +67,12 @@ def on_message(ws,content):
             message.ParseFromString(item.payload)
             info_MemberMessage = f"{message.user.gender} {message.user.nickName}进入直播间"
             print(time_now,info_MemberMessage)
-            f_DM.write(f"{time_now} {info_MemberMessage}\n")
-        # if item.method == "WebcastGiftMessage":
-        #     message = GiftMessage()
-        #     message.ParseFromString(item.payload)
-        #     info_GiftMessage = f"{message.user.nickName}  送来  {message.comboCount}个{message.gift.name}"
-        #     print(time_now,info_GiftMessage)
+            # f_DM.write(f"{time_now} {info_MemberMessage}\n")
+        if item.method == "WebcastGiftMessage":
+            message = GiftMessage()
+            message.ParseFromString(item.payload)
+            info_GiftMessage = f"{message.user.nickName}  送来  {message.comboCount}个{message.gift.name}"
+            print(time_now,info_GiftMessage)
         #     f_LW.write(f"{time_now} {info_GiftMessage}\n")
     f_DM.close()
     # f_LW.close()
