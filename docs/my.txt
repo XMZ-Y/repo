@@ -22,3 +22,9 @@ winsat formal
 winsat formal -restart
 win磁盘检测
 winsat disk -drive d -xml C:\Windows\Performance\WinSAT\DataStore\disk_d.xml
+
+浏览器插件
+AdGuard 广告拦截器
+AIX智能下载器
+chatgpt for google
+webchatgpt
