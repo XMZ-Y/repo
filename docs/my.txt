@@ -1,6 +1,3 @@
-访问返回本机外网ip
-https://ipinfo.io/ip
-
 win激活工具
 http://www.yishimei.cn/network/319.html
 
@@ -26,5 +23,9 @@ winsat disk -drive d -xml C:\Windows\Performance\WinSAT\DataStore\disk_d.xml
 浏览器插件
 AdGuard 广告拦截器
 AIX智能下载器
+setupvpn翻墙插件
 chatgpt for google
 webchatgpt
+
+验证码接码平台
+sms-activate.org/cn
