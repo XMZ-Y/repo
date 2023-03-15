@@ -29,3 +29,13 @@ webchatgpt
 
 验证码接码平台
 sms-activate.org/cn
+
+github代理加速下载
+https://ghproxy.com/
+
+代理软件
+Windows版本
+https://github.com/2dust/v2rayN/releases
+https://github.com/2dust/v2rayN/releases/download/6.17/zz_v2rayN-With-Core-SelfContained.7z
+Android版本
+https://github.com/2dust/v2rayNG/releases
