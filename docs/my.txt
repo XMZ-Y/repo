@@ -23,7 +23,6 @@ winsat disk -drive d -xml C:\Windows\Performance\WinSAT\DataStore\disk_d.xml
 浏览器插件
 AdGuard 广告拦截器
 AIX智能下载器
-setupvpn翻墙插件
 chatgpt for google
 webchatgpt
 
@@ -33,9 +32,16 @@ sms-activate.org/cn
 github代理加速下载
 https://ghproxy.com/
 
-代理软件
+v2ray代理软件下载
+https://github.com/2dust/v2rayN/releases/download/6.17/zz_v2rayN-With-Core-SelfContained.7z
 Windows版本
 https://github.com/2dust/v2rayN/releases
-https://github.com/2dust/v2rayN/releases/download/6.17/zz_v2rayN-With-Core-SelfContained.7z
 Android版本
 https://github.com/2dust/v2rayNG/releases
+
+v2ray节点链接
+vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogImh0dHBzOi8vZ2l0aHViLmNvbS9BbHZpbjk5OTkvbmV3LXBhYy93aWtpIGdf576O5Zu9IiwNCiAgImFkZCI6ICIyMy4yMjcuMzguMTEiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiOTM3OWZlYTAtMDA2ZC00ZmQzLThlMzUtZDQ1YTVhZjcyYWEyIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJmcmd0MS5zc3ItZnJlZTIueHl6IiwNCiAgInBhdGgiOiAiL1VNVzM2MjYyIiwNCiAgInRscyI6ICJ0bHMiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiINCn0=
+
+代理节点获取地址
+https://tr3.freeair888.club/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7/
+https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7
