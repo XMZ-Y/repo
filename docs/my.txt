@@ -39,9 +39,5 @@ https://github.com/2dust/v2rayN/releases
 Android版本
 https://github.com/2dust/v2rayNG/releases
 
-v2ray节点链接
-vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogImh0dHBzOi8vZ2l0aHViLmNvbS9BbHZpbjk5OTkvbmV3LXBhYy93aWtpIGdf576O5Zu9IiwNCiAgImFkZCI6ICIyMy4yMjcuMzguMTEiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiOTM3OWZlYTAtMDA2ZC00ZmQzLThlMzUtZDQ1YTVhZjcyYWEyIiwNCiAgImFpZCI6ICIwIiwNCiAgInNjeSI6ICJhdXRvIiwNCiAgIm5ldCI6ICJ3cyIsDQogICJ0eXBlIjogIm5vbmUiLA0KICAiaG9zdCI6ICJmcmd0MS5zc3ItZnJlZTIueHl6IiwNCiAgInBhdGgiOiAiL1VNVzM2MjYyIiwNCiAgInRscyI6ICJ0bHMiLA0KICAic25pIjogIiIsDQogICJhbHBuIjogIiINCn0=
-
-代理节点获取地址
-https://tr3.freeair888.club/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7/
-https://github.com/Alvin9999/new-pac/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7
+代理节点订阅地址
+https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
