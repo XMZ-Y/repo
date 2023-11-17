@@ -21,7 +21,7 @@ win整体检测
 winsat formal
 winsat formal -restart
 win磁盘检测
-winsat disk -drive d -xml C:\Windows\Performance\WinSAT\DataStore\disk_d.xml
+winsat disk -drive d
 
 浏览器插件
 AdGuard 广告拦截器
