@@ -20,7 +20,7 @@ https://github.com/RipplePiam/MobaXterm-Chinese-Simplified/releases
 win整体检测
 winsat formal
 winsat formal -restart
-win磁盘检测
+win磁盘检测（需要使用管理员权限运行）
 winsat disk -drive d
 
 浏览器插件
