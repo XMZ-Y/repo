@@ -47,5 +47,12 @@ https://github.com/2dust/v2rayN/releases
 Android版本
 https://github.com/2dust/v2rayNG/releases
 
+hosts文件
+140.82.113.3    github.com
+185.199.108.153 assets-cdn.github.com
+199.232.69.194  github.global.ssl.fastly.net
+
 代理节点订阅地址
+https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+https://raw.githubusercontent.com/ssrsub/ssr/master/V2Ray
 https://gh.api.99988866.xyz/https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
